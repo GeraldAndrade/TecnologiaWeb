@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTICA 3</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="panel">
+        <div class="contenedor">
+            <center><h2>EJERCICIO I TEMPERATURA</h2></center>
+            <form action="">
+                <input id="z" type="text">
+                <p>OBTENER</p>
+                <p>=</p>
+                <input id="totl" type="text" readonly>
+                <input type="button" class="btn" onclick="Temperatura()" value="Resultado">
+            </form>
+            </div>
+            <script>
+                function Temperatura(z){
+                    var c=parseFloat(document.getElementById('z').value);
+                    var Q = ("FRIO");
+                    var W = ("TEMPLADO");
+                    var R = ("CALOR");
+                    var res1=c;
+                    document.getElementById('totl').value = res1;
+                    if(res1 < 15){
+                        document.getElementById("totl").value= Q;
+                    }
+                    else{
+                        if(res1>=5 && res1 < 25){
+                            document.getElementById("totl").value= W;
+                        }
+                        else{
+                            if(res1>=25){
+                                document.getElementById("totl").value= R;
+                            }
+                        }
+                    }
+
+                }
+            </script>
+<!----------------------------------------------------------------------------------->
+    <div class="panel">
+    <div class="contenedor">
+        <center><h2>EJERCICIO II FACTORIAL</h2></center>
+        <form action="">
+            <input id="n" type="text">
+            <p>Obtener el factorial</p>
+            <p>=</p>
+            <input id="total" type="text" readonly>
+            <input type="button" class="btn" onclick="factorial()" value="Resultado">
+        </form>
+    </div>
+    <script>
+    function factorial(){
+        var numero=document.getElementById('n').value;
+        var resultado=1;
+        for(var i=1; i<=numero; i++){
+            resultado=resultado*i;
+        }
+        document.getElementById('total').value=resultado;
+    }   
+    </script>
+    <!----------------------------------------------------------------------------------->
+    <div class="panel">
+            <div class="contenedor">
+                <center><h2> EJERCICIO III FIZZBUZZ</h2></center>
+                <br>
+                <form action="">
+                    <input type="button" class="btn" onclick="FizzBuzz()" value="MOSTRAR">
+                </form>
+            </div>
+    </div>
+    
+    <script>
+        function FizzBuzz()
+        {
+            for(var i=1;i<=100;i++)
+            {
+                if(i%5==0 && i%3==0)
+                {
+                document.write(i+".- FIZZ BUZZ"+"<br>");
+                }
+                else
+            {
+                if(i%3==0)
+                {
+                    document.write(i+".- FIZZ "+"<br>");
+                }
+                else
+                {
+                    if(i%5==0)
+                    {
+                    document.write(i+".- BUZZ "+"<br>");
+                    }
+                    else
+                    {
+                    document.write(i+".-"+"<br>")
+                    }
+                }
+
+            }
+
+            }
+        }
+        </script>
+    <!----------------------------------------------------------------------------------->
+    <div class="panel">
+        <div class="contenedor">
+            <center><h2> EJERCICIO IV HORA</h2></center>
+            <br>
+            <form action="">
+                <input type="button" class="btn" onclick="mostrarHora()" value="MOSTRAR">
+            </form>
+        </div>
+        <script>
+            function mostrarHora()
+            {
+                let fecha = new Date();
+                let parrafo = document.getElementById("mostrarHora");
+
+
+                let hora=fecha.getHours();
+                let min=fecha.getMinutes();
+                let seg=fecha.getSeconds();
+
+                console.log("hora : "+hora);
+                console.log("minutos : "+min);
+                console.log("segundos : "+seg);
+
+                let dia=fecha.getDate();
+                let dia_sem=fecha.getDay();
+                let mes=fecha.getMonth();
+                let año=fecha.getFullYear();
+
+                console.log("dia : "+dia_sem);
+                console.log("dia : "+dia);
+                console. log("mes : "+ mes);
+                console.log("año : "+año);
+
+                let meses=['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+                let semana=['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'];
+
+                document.write(semana[dia_sem]+', '+dia+ ' de '+meses[mes]+' del '+año);
+
+            }
+        </script>
+</div>
+</body>
+</html>

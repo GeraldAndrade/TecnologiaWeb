@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+body{
+    background-color: #5bc0be;
+    font-family: 'Abel', sans-serif;
+    text-align: center;
+}
+h5{
+    text-align: center;
+    font-size: 30px;
+ 
+}
+main{
+    background-color: #0b132b;
+    padding: 1%;
+    float: left;
+    border-radius: 20px;
+}
+main ul li{
+    list-style: none;
+    color: #ffffff;
+    font-size: 30px;
+
+}
+p{
+    color: #ffffff;
+}

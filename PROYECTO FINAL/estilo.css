@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Permanent+Marker&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
 * {
   margin: 0;
@@ -8,14 +8,15 @@
 
 body {
   margin: 1cm;
-  font-family: "Alice", sans-serif;
+  font-family: 'Abel', sans-serif;
   background-color: #1fc0c0;
 }
 
 .navbar .brand {
   display: flex;
-  margin: 20px 70px;
-  color: #000000;
+  margin: 20px 10px;
+  color: #ffffff;
+  font-size: 35px;
 }
 
 
@@ -179,7 +180,9 @@ header .wave {
 }
 
 .products-section {
-  background-color: #fff;
+  background-color:  #0ab4b5;
+  padding: 80px;
+  margin: 10px;
 }
 .products-section .wrapper {
   grid-column-start: 2;
@@ -203,7 +206,7 @@ header .wave {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 
@@ -221,10 +224,10 @@ header .wave {
 
 .product-description {
   color: #333;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: normal;
   margin: 0;
-  line-height: 1.3rem;
+  line-height: 1.5rem;
 }
 
 .product-rating {
